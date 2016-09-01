@@ -9,6 +9,7 @@ $year = '2016' ;
 $site_color = '#000000' ;
 $twitter_company = '@username' ;
 $twitter_author = '@username' ;
+$facebook_id = '000000000' ;
       ?>
 
     <html lang="<?php echo $language ?>">
@@ -32,8 +33,8 @@ $twitter_author = '@username' ;
         <meta name="application-name" content="<?php echo $site_name ?>">
 
         <!--Open Graph data -->
+        <meta property="fb:page_id" content="<?php echo $facebook_id ?>" />
         <meta property="og:title" content="<?php echo $title ?>" />
-
         <meta property="og:site_name" content="<?php echo $site_name ?>" />
         <meta property="og:url" content="http://www.<?php echo $site_url ?>" />
         <meta property="og:type" content="website" />
