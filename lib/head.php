@@ -100,9 +100,9 @@ $facebook_id = '000000000' ;
         <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ?>/assets/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
         <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ?>/assets/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
         <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ?>/assets/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)">
-        <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ?>/assets/apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)">
+        <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ?>/assets/apple-touch-startup-image-1024x768.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)">
         <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ?>/assets/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)">
-        <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ?>/assets/apple-touch-startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)">
+        <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ?>/assets/apple-touch-startup-image-2048x1496.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)">
 
         <!--Favicon-->
         <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
