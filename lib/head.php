@@ -10,6 +10,7 @@ $site_color = '#000000' ;
 $twitter_company = '@username' ;
 $twitter_author = '@username' ;
 $facebook_id = '000000000' ;
+$facebook_author = 'https://www.facebook.com/username/';
       ?>
 
     <html lang="<?php echo $language ?>">
@@ -44,6 +45,7 @@ $facebook_id = '000000000' ;
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="<?php echo $language ?>">
         <meta property="og:description" content="<?php echo $description ?>" />
+        <meta property="article:author" content="<?php echo $facebook_author ?>" />
 
         <!--Google+ data-->
         <meta itemprop="image" content="http://www.<?php echo $site_url ?>/assets/schema-preview.jpg">
