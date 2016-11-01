@@ -1,0 +1,20 @@
+CACHE MANIFEST
+
+# NOV - 01 - 2016 : v1.0
+
+CACHE:
+index.php
+offline.php
+/css/main.min.css
+/js/actions.js
+/img/offline.jpg
+/lib/head.php
+/lib/footer.php
+/lib/nav.php
+/lib/scripts.php
+http://code.jquery.com/jquery-latest.min.js
+
+FALLBACK:
+/ /offline.php
+/img/ /img/offline.jpg
+

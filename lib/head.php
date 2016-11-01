@@ -13,7 +13,7 @@ $facebook_id = '000000000' ;
 $facebook_author = 'https://www.facebook.com/username/';
       ?>
 
-    <html lang="<?php echo $language ?>">
+    <html lang="<?php echo $language ?>" manifest="site.appcache">
 
     <head>
 
@@ -56,7 +56,7 @@ $facebook_author = 'https://www.facebook.com/username/';
         <!-- Twitter Card data -->
         <meta name="twitter:description" content="<?php echo $description ?>">
         <meta name="twitter:title" content="<?php echo $title ?>">
-        <meta name="twitter:card" content="summary">
+        <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="<?php echo $twitter_company ?>">
         <meta name="twitter:creator" content="<?php echo $twitter_author ?>">
         <meta name="twitter:image:src" content="http://www.<?php echo $site_url ?>/assets/twitter-preview.jpg">
