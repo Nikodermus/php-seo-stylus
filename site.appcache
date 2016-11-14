@@ -4,7 +4,7 @@ CACHE MANIFEST
 
 CACHE:
 index.php
-offline.php
+404.php
 /css/main.min.css
 /js/actions.js
 /img/offline.jpg
@@ -15,6 +15,6 @@ offline.php
 http://code.jquery.com/jquery-latest.min.js
 
 FALLBACK:
-/ /offline.php
+/ 404.php
 /img/ /img/offline.jpg
 

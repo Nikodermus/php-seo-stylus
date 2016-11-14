@@ -8,13 +8,8 @@ $keywords = 'offline' ;
 
             <section>
                 <article>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-
-                            </div>
-                        </div>
-                    </div>
+                    <h1>you are offline now! congrats</h1>
+                    <img src="img/logo.svg" alt="">
 
                 </article>
             </section>
