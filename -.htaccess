@@ -7,10 +7,26 @@
 	mod_gzip_item_exclude mime ^image/.*
 	mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
 </IfModule>
-<FilesMatch "\.(jpg|png|svg|gif|ico|woff|woff2|pdf|txt)$">
+<IfModule mod_rewrite.c>
+ RewriteCond %{REQUEST_URI} /+[^.]+$
+ RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
+</IfModule>
+<FilesMatch "\.(jpg|png|svg|gif|ico|woff|woff2|pdf)$">
 Header set Cache-Control "max-age=1928448000"
 </FilesMatch>
-<FilesMatch "\.(css|html|php|js)$">
+<FilesMatch "\.(css|js|xml|txt)$">
 Header set Cache-Control "max-age=604800"
 </FilesMatch>
+<FilesMatch ".(html|htm|php)$">
+Header set Cache-Control "max-age=60, private, proxy-revalidate"
+</FilesMatch>
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !=/favicon.ico
+AddType video/ogg .ogv
+AddType video/ogg .ogg
+AddType video/mp4 .mp4
+AddType video/webm .webm
+AddType application/x-shockwave-flash swf
+ErrorDocument 404 http://www.sitename.com/404.php
 AddType text/cache-manifest .appcache

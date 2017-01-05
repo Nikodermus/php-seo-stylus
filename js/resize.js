@@ -1,17 +1,21 @@
+//Timing Starts
+var start = new Date();
+var startTime = start.getTime();
+
 //Resizing
 $(window).load(function () {
     $(window).resize(function () {
         var elem = $(this);
-        var elemAncho = $(this).width();
-        var elemAlto = $(this).height();
+        var elemWidth = $(this).width();
+        var elemHeight = $(this).height();
 
-        $('.youtubeBox').css('height', elemAlto * 80 / 100);
 
-        if (elemAncho <= 900) { //Mobile
-            $('.mainFrame').css('height', elemAncho - 21);
 
-        } else { //Desktop 
-            $('.mainFrame').css('height', elemAncho - 21);
+        if (elemWidth >= 993) {
+            //Desktop
+
+        } else {
+            //Mobile 
         }
     });
     $(window).resize();
