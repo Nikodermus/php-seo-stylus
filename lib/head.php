@@ -13,19 +13,39 @@ $facebook_id = '000000000' ;
 $facebook_author = 'https://www.facebook.com/wearedakio/';
 $analytics_developer = 'UA-85063001-X';
 $analytics_client = 'UA-00000000-0';
+$google-site = '0000000000';
       ?>
 
+    <!-- Uncomment on website release
     <html lang="<?php echo $language ?>" manifest="site.appcache">
+    -->
+
+
+    <!--Comment on website release-->
+    <html lang="<?php echo $language ?>">
+    <!--Comment on website release-->
+
 
     <head>
+
+        <!--Comment on website release-->
+        <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+        <meta http-equiv="EXPIRES" content="Mon, 22 Jul 2002 11:12:01 GMT">
+        <!--Comment on website release-->
 
         <!--Meta must have-->
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="All" />
+        <meta name="robots" content="index, follow" />
         <meta name="googlebot-news" content="all" />
+        <meta name="googlebot" content="all" />
         <meta name="HandheldFriendly" content="True">
+        <META name="SLURP" content="all">
+        <META name="MSNBOT" content="all">
+        <meta name="teoma" content="all">
+        <meta name="revisit-after" content="3 days">
+        <meta name="google-site-verification" content="<?php echo $google_site ?>" />
 
         <!--Meta info-->
         <meta name="keywords" content="<?php echo $keywords ?>" />
@@ -34,6 +54,14 @@ $analytics_client = 'UA-00000000-0';
         <meta name="author" content="<?php echo $author ?>" />
         <meta name='generator' content='<?php echo $author ?>'>
         <meta name="application-name" content="<?php echo $site_name ?>">
+
+        <!--Meta Location-->
+        <!--Only use if needed http://www.geo-tag.de/generator/en.html
+            <meta name="geo.region" content="CO" />
+            <meta name="geo.placename" content="Bogot&aacute;" />
+            <meta name="geo.position" content="4.65357;-74.061354" />
+            <meta name="ICBM" content="4.65357, -74.061354" />
+            -->
 
         <!--Open Graph data -->
         <meta property="fb:app_id" content="<?php echo $facebook_id ?>" />
@@ -76,7 +104,7 @@ $analytics_client = 'UA-00000000-0';
         <meta name="msapplication-square150x150logo" content="assets/tile.png" />
         <meta name="msapplication-wide310x150logo" content="assets/tile-wide.png" />
 
-        <!--
+        <!--Only use if needed
         <link rel="canonical" href="http://www.<?php echo $site_url ?>" />
         -->
 
