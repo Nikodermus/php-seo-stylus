@@ -13,7 +13,7 @@ $facebook_id = '000000000' ;
 $facebook_author = 'https://www.facebook.com/wearedakio/';
 $analytics_developer = 'UA-85063001-X';
 $analytics_client = 'UA-00000000-0';
-$google-site = '0000000000';
+$google_site = '0000000000';
       ?>
 
     <!-- Uncomment on website release
