@@ -3,7 +3,8 @@
 <?php 
 $language = 'en_US' ;
 $site_name = 'The Website' ;
-$site_url = 'yourwebsite.com' ; 
+$site_url = 'yourwebsite.com' ;
+$title_pattern = ' | Dakio.co' ; //For all the titles to be similar ex. Home | Dakio.co
 $author = 'Author Name' ; 
 $year = date("Y") ;
 $site_color = '#000000' ;
@@ -149,23 +150,10 @@ $google_site = '0000000000';
 	    <![endif]-->
 
     <title>
-        <?php echo $title ?>
+        <?php echo $title, $title_pattern; ?>
     </title>
 
-    <!--External Stylesheets -->
-    <link rel="stylesheet" href="css/normalize.min.css" media="screen" />
-    <link rel="stylesheet" href="css/animate.min.css" media="screen" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" />
-
-    <!--Main Stylesheet-->
-    <link rel="stylesheet" href="css/main.min.css" media="screen" />
-
-    <!--jQuery-->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-
-    <!--Resizing -->
-    <script type="text/javascript" src="js/resize.js"></script>
-
+    <?php include 'links.php'?>
     <!--Google Analytics-->
     <script>
         (function(i, s, o, g, r, a, m) {
