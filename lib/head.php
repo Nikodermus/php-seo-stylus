@@ -22,12 +22,12 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
       ?>
 
 <!-- Uncomment on website release
-    <html lang="<?php echo $language ?>" manifest="site.appcache">
+    <html lang="<?php echo $language ;?>" manifest="site.appcache">
     -->
 
 
 <!--Comment on website release-->
-<html lang="<?php echo $language ?>">
+<html lang="<?php echo $language ;?>">
 <!--Comment on website release-->
 
 
@@ -50,17 +50,17 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
     <META name="MSNBOT" content="all">
     <meta name="teoma" content="all">
     <meta name="revisit-after" content="3 days">
-    <meta name="google-site-verification" content="<?php echo $google_site ?>" />
-    <meta name="p:domain_verify" content="<?php echo $pinterest_site ?>" />
+    <meta name="google-site-verification" content="<?php echo $google_site ;?>" />
+    <meta name="p:domain_verify" content="<?php echo $pinterest_site ;?>" />
 
 
     <!--Meta info-->
-    <meta name="keywords" content="<?php echo $keywords ?>" />
-    <meta name="description" content="<?php echo $description ?>" />
-    <meta name="date" content="<?php echo $year ?>" />
-    <meta name="author" content="<?php echo $author ?>" />
-    <meta name='generator' content='<?php echo $author ?>'>
-    <meta name="application-name" content="<?php echo $site_name ?>">
+    <meta name="keywords" content="<?php echo $keywords ;?>" />
+    <meta name="description" content="<?php echo $description ;?>" />
+    <meta name="date" content="<?php echo $year ;?>" />
+    <meta name="author" content="<?php echo $author ;?>" />
+    <meta name='generator' content='<?php echo $author ;?>'>
+    <meta name="application-name" content="<?php echo $site_name ;?>">
 
     <!--Meta Location-->
     <!--Only use if needed http://www.geo-tag.de/generator/en.html
@@ -71,47 +71,50 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
             -->
 
     <!--Open Graph data -->
-    <meta property="fb:app_id" content="<?php echo $facebook_id ?>" />
-    <meta property="og:title" content="<?php echo $title ?>" />
-    <meta property="og:site_name" content="<?php echo $site_name ?>" />
-    <meta property="og:url" content="http://www.<?php echo $site_url ?>" />
+    <meta property="fb:app_id" content="<?php echo $facebook_id ;?>" />
+    <meta property="og:title" content="<?php echo $title ;?>" />
+    <meta property="og:site_name" content="<?php echo $site_name ;?>" />
+    <meta property="og:url" content="http://www.<?php echo $site_url ;?>" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://www.<?php echo $site_url ?>/assets/facebook-preview.jpg" />
+    <meta property="og:image" content="http://www.<?php echo $site_url ;?>/assets/facebook-preview.jpg" />
     <meta property="og:image:type" content="image/jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="<?php echo $location ?>">
-    <meta property="og:description" content="<?php echo $description ?>" />
-    <meta property="article:author" content="<?php echo $facebook_author ?>" />
+    <meta property="og:locale" content="<?php echo $location ;?>">
+    <meta property="og:description" content="<?php echo $description ;?>" />
+    <meta property="article:author" content="<?php echo $facebook_author ;?>" />
 
     <!--Google+ data-->
-    <meta itemprop="description" content="<?php echo $description ?>">
-    <meta itemprop="name" content="<?php echo $title ?>">
+    <meta itemprop="description" content="<?php echo $description ;?>">
+    <meta itemprop="name" content="<?php echo $title, $title_pattern ;?>">
 
 
     <!-- Twitter Card data -->
-    <meta name="twitter:description" content="<?php echo $description ?>">
-    <meta name="twitter:title" content="<?php echo $title ?>">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="<?php echo $twitter_company ?>">
-    <meta name="twitter:creator" content="<?php echo $twitter_author ?>">
-    <meta name="twitter:image:src" content="http://www.<?php echo $site_url ?>/assets/twitter-preview.jpg">
+    <meta name="twitter:site" content="<?php echo $twitter_company ;?>">
+    <meta name="twitter:creator" content="<?php echo $twitter_author ;?>">
+    <meta name="twitter:title" content="<?php echo $title, $title_pattenr ;?>">
+    <meta name="twitter:description" content="<?php echo $description ;?>">
+    <meta name="twitter:image" content="http://www.<?php echo $site_url ;?>/assets/twitter-preview.jpg">
+    <meta name="twitter:image:src" content="http://www.<?php echo $site_url ;?>/assets/twitter-preview.jpg">
     <meta name="twitter:image:width" content="870">
     <meta name="twitter:image:height" content="750">
+    <meta name="twitter:image:alt" content="<?php echo $description ;?>">
+
 
     <!-- Windows 8 and Phone-->
     <meta name="msapplication-TileImage" content="assets/favicon.png">
-    <meta name="msapplication-TileColor" content="<?php echo $site_color ?>" />
-    <meta name="application-name" content="<?php echo $site_name ?>" />
+    <meta name="msapplication-TileColor" content="<?php echo $site_color ;?>" />
+    <meta name="application-name" content="<?php echo $site_name ;?>" />
     <meta name="MobileOptimized" content="320">
-    <meta name="msapplication-navbutton-color" content="<?php echo $site_color ?>">
+    <meta name="msapplication-navbutton-color" content="<?php echo $site_color ;?>">
 
     <!-- IE11 tiles -->
     <meta name="msapplication-square150x150logo" content="assets/tile.png" />
     <meta name="msapplication-wide310x150logo" content="assets/tile-wide.png" />
 
     <!--Only use if needed
-        <link rel="canonical" href="http://www.<?php echo $site_url ?>" />
+        <link rel="canonical" href="http://www.<?php echo $site_url ;?>" />
         -->
 
     <!--Apple Meta Data-->
@@ -119,8 +122,8 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
     <meta name="apple-mobile-web-app-status-bar-style" content="black-traslucent">
 
     <!--Theming-->
-    <meta name="theme-color" content="<?php echo $site_color ?>">
-    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="<?php echo $site_color ?>">
+    <meta name="theme-color" content="<?php echo $site_color ;?>">
+    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="<?php echo $site_color ;?>">
 
     <!--Apple Touch Icon-->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/apple-touch-icon-57x57.png">
@@ -134,13 +137,13 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180x180.png">
 
     <!--Apple Load Image-->
-    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ?>/assets/apple-touch-startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)">
-    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ?>/assets/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
-    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ?>/assets/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
-    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ?>/assets/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)">
-    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ?>/assets/apple-touch-startup-image-1024x768.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)">
-    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ?>/assets/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)">
-    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ?>/assets/apple-touch-startup-image-2048x1496.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)">
+    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)">
+    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-1024x768.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)">
+    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-2048x1496.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)">
 
     <!--Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -155,7 +158,7 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
 	    <![endif]-->
 
     <title>
-        <?php echo $title, $title_pattern; ?>
+        <?php echo $title, $title-pattern ;?>
     </title>
 
     <?php include 'links.php';?>
@@ -174,8 +177,8 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
 
-        ga('create', '<?php echo $analytics_developer ?>', 'auto');
-        ga('create', '<?php echo $analytics_client ?>', 'auto', 'CLIENT');
+        ga('create', '<?php echo $analytics_developer ;?>', 'auto');
+        ga('create', '<?php echo $analytics_client ;?>', 'auto', 'CLIENT');
         ga('send', 'pageview');
         ga('CLIENT.send', 'pageview');
 
