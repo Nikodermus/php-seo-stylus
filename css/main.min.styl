@@ -1,10 +1,18 @@
-// cd *ruta de la carpeta css*
-//pushd *ruta externa de la carpeta css*
-// stylus -u nib -w main.styl
+/*
+GENERAL STYLES:
+
+   Author: AUTHOR NAME
+   Project: PROJECT NAME
+   DATE: DAY - MONTH - YEAR
+
+*/
 
 @import 'nib'
 
-vendor-prefixes = webkit moz o ms official
+vendor-prefixes = webkit moz o ms official mso xv wap khtml apple prince ah hp ro rim tc
+$master = (25/16)rem
+$master-big = (78/16)rem
+$i = !important
 
 //Recommended font sizes
  f12 = 0.75rem
@@ -18,7 +26,7 @@ vendor-prefixes = webkit moz o ms official
 f119 = 7.4375rem
 f159 = 9.9375rem
 
-// Generales
+// General
 @-ms-viewport
     width device-width
 
@@ -62,27 +70,83 @@ img
     
 //Special Classes
 .bold
-    font-weight bolder
+    font-weight bolder $i
+.underline
+    text-decoration underline
+.uppercase
+    text-transform uppercase
+.no-padding
+    padding-left 0
+    padding-right 0
+.no-margin
+    margin-left 0
+    margin-right 0
 .f0
-    font-size f12 !important
+    font-size f12 $i
+    *
+        font-size f12 $i
 .f1
-    font-size f16 !important
+    font-size f16 $i
+    *
+        font-size f16 $i
 .f2
-    font-size f21 !important
+    font-size f21 $i
+    *
+        font-size f21 $i
 .f3
-    font-size f28 !important
+    font-size f28 $i
+    *
+        font-size f28 $i
 .f4
-    font-size f37 !important
+    font-size f37 $i
+    *
+        font-size f37 $i
 .f5
-    font-size f50 !important
+    font-size f50 $i
+    *
+        font-size f50 $i
 .f6
-    font-size f67 !important
+    font-size f67 $i
+    *
+        font-size f67 $i
 .f7
-    font-size f89 !important
+    font-size f89 $i
+    *
+        font-size f89 $i
 .f8
-    font-size f119 !important
+    font-size f119 $i
+    *
+        font-size f119 $i
 .f9
-    font-size f159 !important
+    font-size f159 $i
+    *
+        font-size f159 $i
+.space-top
+    margin-top $master
+.space-bottom
+    margin-bottom $master
+.space-left
+    margin-left $master
+.space-right
+    margin-right $master
+.space-title-top
+    margin-top $master-big
+.space-title-bottom
+    margin-bottom $master-big
+.space-title-left
+    margin-left $master-big
+.space-title-right
+    margin-right $master-big
+.square
+    position relative
+    &:after
+        content ''
+        padding-bottom 100%
+        display block
+    .square--content
+        position absolute
+        width 100%
+        height 100%
 // Index
 
 

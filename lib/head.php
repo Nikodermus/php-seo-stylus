@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 
 <?php 
-$language = 'en_US' ;
+$language = 'en' ;
+$location = 'en_US' ;
 $site_name = 'The Website' ;
 $site_url = 'yourwebsite.com' ;
-$title_pattern = ' | Dakio.co' ; //For all the titles to be similar ex. Home | Dakio.co
-$author = 'Author Name' ; 
+$title_pattern = ' | Dakio.co' ; 
+$author = 'Author Name | Dakio.co' ; 
 $year = gmdate("Y") ;
 $site_color = '#000000' ;
 $twitter_company = '@username' ;
@@ -15,6 +16,9 @@ $facebook_author = 'https://www.facebook.com/wearedakio/';
 $analytics_developer = 'UA-85063001-X';
 $analytics_client = 'UA-00000000-0';
 $google_site = '0000000000';
+$pinterest_site = '0000000000000';
+$current_location = basename($_SERVER["SCRIPT_FILENAME"]);
+
       ?>
 
 <!-- Uncomment on website release
@@ -47,6 +51,8 @@ $google_site = '0000000000';
     <meta name="teoma" content="all">
     <meta name="revisit-after" content="3 days">
     <meta name="google-site-verification" content="<?php echo $google_site ?>" />
+    <meta name="p:domain_verify" content="<?php echo $pinterest_site ?>" />
+
 
     <!--Meta info-->
     <meta name="keywords" content="<?php echo $keywords ?>" />
@@ -74,12 +80,11 @@ $google_site = '0000000000';
     <meta property="og:image:type" content="image/jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="<?php echo $language ?>">
+    <meta property="og:locale" content="<?php echo $location ?>">
     <meta property="og:description" content="<?php echo $description ?>" />
     <meta property="article:author" content="<?php echo $facebook_author ?>" />
 
     <!--Google+ data-->
-    <meta itemprop="image" content="http://www.<?php echo $site_url ?>/assets/schema-preview.jpg">
     <meta itemprop="description" content="<?php echo $description ?>">
     <meta itemprop="name" content="<?php echo $title ?>">
 
@@ -138,12 +143,12 @@ $google_site = '0000000000';
     <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ?>/assets/apple-touch-startup-image-2048x1496.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)">
 
     <!--Favicon-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="assets/android-chrome-192x192.png" sizes="192x192">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
     <!--[if lt IE 8]>
 	    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -153,7 +158,7 @@ $google_site = '0000000000';
         <?php echo $title, $title_pattern; ?>
     </title>
 
-    <?php include 'links.php'?>
+    <?php include 'links.php';?>
     <!--Google Analytics-->
     <script>
         (function(i, s, o, g, r, a, m) {
