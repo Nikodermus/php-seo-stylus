@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/main.min.css" media="screen" />
 
 <!--jQuery-->
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 
 <!--Resizing -->
 <script type="text/javascript" src="js/resize.js"></script>

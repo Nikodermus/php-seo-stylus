@@ -17,6 +17,7 @@ $analytics_developer = 'UA-85063001-X';
 $analytics_client = 'UA-00000000-0';
 $google_site = '0000000000';
 $pinterest_site = '0000000000000';
+$protocol = 'http'; //http or https
 $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
 
       ?>
@@ -74,9 +75,9 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
     <meta property="fb:app_id" content="<?php echo $facebook_id ;?>" />
     <meta property="og:title" content="<?php echo $title ;?>" />
     <meta property="og:site_name" content="<?php echo $site_name ;?>" />
-    <meta property="og:url" content="http://www.<?php echo $site_url ;?>" />
+    <meta property="og:url" content="<?php echo $protocol ;?>://www.<?php echo $site_url ;?>" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://www.<?php echo $site_url ;?>/assets/facebook-preview.jpg" />
+    <meta property="og:image" content="<?php echo $protocol ;?>://www.<?php echo $site_url ;?>/assets/facebook-preview.jpg" />
     <meta property="og:image:type" content="image/jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -86,7 +87,7 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
 
     <!--Google+ data-->
     <meta itemprop="description" content="<?php echo $description ;?>">
-    <meta itemprop="name" content="<?php echo $title, $title_pattern ;?>">
+    <meta itemprop="name" content="<?php echo $title. $title_pattern ;?>">
 
 
     <!-- Twitter Card data -->
@@ -95,8 +96,8 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
     <meta name="twitter:creator" content="<?php echo $twitter_author ;?>">
     <meta name="twitter:title" content="<?php echo $title, $title_pattenr ;?>">
     <meta name="twitter:description" content="<?php echo $description ;?>">
-    <meta name="twitter:image" content="http://www.<?php echo $site_url ;?>/assets/twitter-preview.jpg">
-    <meta name="twitter:image:src" content="http://www.<?php echo $site_url ;?>/assets/twitter-preview.jpg">
+    <meta name="twitter:image" content="<?php echo $protocol ;?>://www.<?php echo $site_url ;?>/assets/twitter-preview.jpg">
+    <meta name="twitter:image:src" content="<?php echo $protocol ;?>://www.<?php echo $site_url ;?>/assets/twitter-preview.jpg">
     <meta name="twitter:image:width" content="870">
     <meta name="twitter:image:height" content="750">
     <meta name="twitter:image:alt" content="<?php echo $description ;?>">
@@ -137,13 +138,20 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180x180.png">
 
     <!--Apple Load Image-->
-    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)">
-    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
-    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
-    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)">
-    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-1024x768.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)">
-    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)">
-    <link rel="apple-touch-startup-image" href="http://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-2048x1496.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="<?php echo $protocol ;?>://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-320x460.png"
+        media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)">
+    <link rel="apple-touch-startup-image" href="<?php echo $protocol ;?>://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-640x920.png"
+        media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="<?php echo $protocol ;?>://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-640x1096.png"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="<?php echo $protocol ;?>://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-768x1004.png"
+        media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)">
+    <link rel="apple-touch-startup-image" href="<?php echo $protocol ;?>://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-1024x768.png"
+        media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)">
+    <link rel="apple-touch-startup-image" href="<?php echo $protocol ;?>://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-1536x2008.png"
+        media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="<?php echo $protocol ;?>://www.<?php echo $site_url ;?>/assets/apple-touch-startup-image-2048x1496.png"
+        media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)">
 
     <!--Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -158,15 +166,15 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
 	    <![endif]-->
 
     <title>
-        <?php echo $title, $title-pattern ;?>
+        <?php echo $title. $title_pattern ;?>
     </title>
 
     <?php include 'links.php';?>
     <!--Google Analytics-->
     <script>
-        (function(i, s, o, g, r, a, m) {
+        (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
+            i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date();
             a = s.createElement(o),
@@ -181,8 +189,31 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
         ga('create', '<?php echo $analytics_client ;?>', 'auto', 'CLIENT');
         ga('send', 'pageview');
         ga('CLIENT.send', 'pageview');
-
     </script>
 </head>
 
+
 <body>
+
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '<?php echo $facebook_id ;?>',
+                cookie: true,
+                xfbml: true,
+                version: 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
