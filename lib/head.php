@@ -73,7 +73,7 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
 
     <!--Open Graph data -->
     <meta property="fb:app_id" content="<?php echo $facebook_id ;?>" />
-    <meta property="og:title" content="<?php echo $title ;?>" />
+    <meta property="og:title" content="<?php echo $title.$title_pattern ;?>" />
     <meta property="og:site_name" content="<?php echo $site_name ;?>" />
     <meta property="og:url" content="<?php echo $protocol ;?>://www.<?php echo $site_url ;?>" />
     <meta property="og:type" content="website" />
@@ -94,7 +94,7 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="<?php echo $twitter_company ;?>">
     <meta name="twitter:creator" content="<?php echo $twitter_author ;?>">
-    <meta name="twitter:title" content="<?php echo $title, $title_pattenr ;?>">
+    <meta name="twitter:title" content="<?php echo $title, $title_pattern ;?>">
     <meta name="twitter:description" content="<?php echo $description ;?>">
     <meta name="twitter:image" content="<?php echo $protocol ;?>://www.<?php echo $site_url ;?>/assets/twitter-preview.jpg">
     <meta name="twitter:image:src" content="<?php echo $protocol ;?>://www.<?php echo $site_url ;?>/assets/twitter-preview.jpg">
