@@ -3,19 +3,19 @@
 $title = 'Title' ; 
 $description = 'Description' ; 
 $keywords = 'keywords, divided, by, commas' ; 
-   include 'lib/head.php'; include 'lib/nav.php'; ?>
+   require 'lib/head.php'; require 'lib/nav.php'; ?>
 
-    <section>
-        <article>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+<section id="">
+    <article>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 
-                    </div>
                 </div>
             </div>
+        </div>
 
-        </article>
-    </section>
+    </article>
+</section>
 
-    <?php include 'lib/footer.php'; include 'lib/scripts.php'; ?>
+<?php require 'lib/footer.php'; require 'lib/scripts.php'; ?>

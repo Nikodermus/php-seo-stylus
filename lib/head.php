@@ -39,7 +39,7 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
     <meta http-equiv="EXPIRES" content="Mon, 22 Jul 2002 11:12:01 GMT">
     <!--Comment on website release-->
 
-    <!--Meta must have-->
+    <!--meta must have-->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -47,15 +47,14 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
     <meta name="googlebot-news" content="all" />
     <meta name="googlebot" content="all" />
     <meta name="HandheldFriendly" content="True">
-    <META name="SLURP" content="all">
-    <META name="MSNBOT" content="all">
+    <meta name="SLURP" content="all">
+    <meta name="MSNBOT" content="all">
     <meta name="teoma" content="all">
-    <meta name="revisit-after" content="3 days">
     <meta name="google-site-verification" content="<?php echo $google_site ;?>" />
     <meta name="p:domain_verify" content="<?php echo $pinterest_site ;?>" />
 
 
-    <!--Meta info-->
+    <!--meta info-->
     <meta name="keywords" content="<?php echo $keywords ;?>" />
     <meta name="description" content="<?php echo $description ;?>" />
     <meta name="date" content="<?php echo $year ;?>" />
@@ -63,7 +62,7 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
     <meta name='generator' content='<?php echo $author ;?>'>
     <meta name="application-name" content="<?php echo $site_name ;?>">
 
-    <!--Meta Location-->
+    <!--meta Location-->
     <!--Only use if needed http://www.geo-tag.de/generator/en.html
             <meta name="geo.region" content="CO" />
             <meta name="geo.placename" content="Bogot&aacute;" />
@@ -118,7 +117,7 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
         <link rel="canonical" href="http://www.<?php echo $site_url ;?>" />
         -->
 
-    <!--Apple Meta Data-->
+    <!--Apple meta Data-->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-traslucent">
 
@@ -169,7 +168,7 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
         <?php echo $title. $title_pattern ;?>
     </title>
 
-    <?php include 'links.php';?>
+    <?php require 'links.php';?>
     <!--Google Analytics-->
     <script>
         (function (i, s, o, g, r, a, m) {
