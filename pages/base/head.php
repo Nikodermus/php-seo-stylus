@@ -7,7 +7,6 @@ $site_name = 'The Website';
 $site_url = 'yourwebsite.com';
 $title_pattern = ' | The Website';
 $author = 'Author Name |';
-$year = gmdate("Y");
 $site_color = '#000000';
 $twitter_company = '@username';
 $twitter_author = '@wearedakio';
@@ -17,7 +16,10 @@ $analytics_developer = 'UA-85063001-X';
 $analytics_client = 'UA-00000000-0';
 $google_site = '0000000000';
 $pinterest_site = '0000000000000';
-$protocol = 'http'; //http or https
+$protocol = 'http'; // http | https
+
+// Do not change
+$year = gmdate("Y");
 $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
 
 ?>

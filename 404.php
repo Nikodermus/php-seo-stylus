@@ -10,7 +10,7 @@ include 'lib/nav.php';
 <section>
     <article>
         <h1>you are offline now! congrats</h1>
-        <img src="img/logo.svg" alt="">
+        <img src="/static/img/offline.jpg" alt="">
 
     </article>
 </section>
