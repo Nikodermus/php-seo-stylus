@@ -1,0 +1,73 @@
+@require "nib"
+@require "./variables"
+
+// Pixels to REM
+rem(size)
+    return (size / size) rem
+
+// Pixels to EM
+em(size)
+    return (size / size) em
+
+// Add retina background media
+bg-retina(file, ext, parallax = false)
+    background-image: url('file"."ext')
+    background-size: cover
+    background-position: center center
+
+    if (parallax)
+        background-attachment: fixed
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+        background-image: url('file"@2x."ext')
+        background-size: cover
+        background-position: center center
+
+        if (parallax)
+            background-attachment: fixed
+
+// Cross-browser placeholder support
+placeholder()
+    ::-webkit-input-placeholder
+        {block}
+
+    :-moz-placeholder
+        {block}
+
+    ::-moz-placeholder
+        {block}
+
+    :-ms-input-placeholder
+        {block}
+
+scrollbars(size, foreground-color, background-color = mix(foreground-color, white, 50%))
+    // For Google Chrome
+    ::-webkit-scrollbar
+        width: size
+        height: size
+
+    ::-webkit-scrollbar-thumb
+        background: foreground-color
+
+    ::-webkit-scrollbar-track
+        background: background-color
+
+    // For Internet Explorer
+    body
+        scrollbar-face-color: foreground-color
+        scrollbar-track-color: background-color
+
+verticalAlign()
+    absolute: top 50% left 0
+    transform: translateY(-50%)
+
+disabled(color)
+    &:disabled
+    &[disabled]
+    &--disabled
+        background: lighten(color, 40%)
+        cursor: not-allowed
+        {block}
+
+        &:hover
+            background: @background

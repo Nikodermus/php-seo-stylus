@@ -1,0 +1,32 @@
+@require "./components/*"
+@require "./helpers/*"
+@require "./library/*"
+@require "./vendor/*"
+
+:root
+    scrollbar
+
+// General Elements Styling
+html
+    background: white
+    color: black
+    font-family: font-main, font-sans
+    max-width: 100vw
+    min-height: 100vh
+    overflow-x: hidden
+    scroll-behavior: smooth
+
+    body
+        background: white
+        color: black
+        font-family: @font-family
+        max-width: @max-width
+        min-height: 100%
+        overflow-x: hidden
+        width: 100vw
+
+        scrollbar
+        *
+            font-family: @font-family
+            line-height: 1.3
+            scrollbar

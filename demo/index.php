@@ -3,8 +3,8 @@ $title = 'Title';
 $description = 'Description';
 $keywords = 'keywords, divided, by, commas';
 
-require './pages/base/head.php';
-require './pages/lib/nav.php';
+require '../pages/base/head.php';
+require '../pages/lib/nav.php';
 ?>
 
 <main>
@@ -15,6 +15,6 @@ require './pages/lib/nav.php';
 </main>
 
 <?php
-require './pages/lib/footer.php';
-require './pages/base/scripts.php';
+require '../pages/lib/footer.php';
+require '../pages/base/scripts.php';
 ?>

@@ -6,7 +6,6 @@ CACHE:
 404.php
 offline.php
 img/offline.jpg
-http://code.jquery.com/jquery-latest.min.js
 
 FALLBACK:
 / offline.php
