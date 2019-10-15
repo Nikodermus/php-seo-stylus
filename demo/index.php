@@ -9,6 +9,7 @@ require '../pages/lib/nav.php';
 
 <main>
     <section>
+        <h1>You are in demo!</h1>
         <article></article>
         <article></article>
     </section>

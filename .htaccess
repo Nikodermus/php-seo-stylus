@@ -28,5 +28,5 @@ AddType video/ogg .ogg
 AddType video/mp4 .mp4
 AddType video/webm .webm
 AddType application/x-shockwave-flash swf
-ErrorDocument 404 http://www.sitename.com/404.php
+ErrorDocument 404 http://www.REPLACEME.com/404.php
 AddType text/cache-manifest .appcache
