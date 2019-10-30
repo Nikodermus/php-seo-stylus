@@ -1,17 +1,17 @@
 @require "nib"
-@require "./variables"
+@require "./tokens"
 
 // Pixels to REM
-rem(size)
-    return (size / size) rem
+rem(measure)
+    return measure / unit(font-size-base, "") * 1rem
 
 // Pixels to EM
-em(size)
-    return (size / size) em
+em(measure)
+    return measure / unit(font-size-base, "") * 1em
 
 // Add retina background media
 bg-retina(file, ext, parallax = false)
-    background-image: url('file"."ext')
+    background-image: url(file + "." + ext)
     background-size: cover
     background-position: center center
 
@@ -19,7 +19,7 @@ bg-retina(file, ext, parallax = false)
         background-attachment: fixed
 
     @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
-        background-image: url('file"@2x."ext')
+        background-image: url(file + "@2x" + ext)
         background-size: cover
         background-position: center center
 
@@ -54,12 +54,9 @@ scrollbars(size, foreground-color, background-color = mix(foreground-color, whit
 
     // For Internet Explorer
     body
+    *
         scrollbar-face-color: foreground-color
         scrollbar-track-color: background-color
-
-verticalAlign()
-    absolute: top 50% left 0
-    transform: translateY(-50%)
 
 disabled(color)
     &:disabled
@@ -71,3 +68,10 @@ disabled(color)
 
         &:hover
             background: @background
+
+font-face(font, weight, style = "normal")
+    @font-face
+        font-family: font
+        src: url("/static/fonts/" + font + ".woff2") format("woff2"), url("/static/fonts/" + font + ".woff2") format("woff"), url("/static/fonts/" + font + ".woff2") format("ttf")
+        font-weight: weight
+        font-style: style
