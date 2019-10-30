@@ -17,5 +17,4 @@ include 'lib/nav.php';
 
 <?php
 include 'lib/footer.php';
-include 'lib/scripts.php';
 ?>

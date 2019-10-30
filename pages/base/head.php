@@ -166,6 +166,8 @@ $current_location = basename($_SERVER["SCRIPT_FILENAME"]);
         ga('send', 'pageview');
         ga('CLIENT.send', 'pageview');
     </script>
+
+    <?php require 'scripts.php'; ?>
 </head>
 
 <body>

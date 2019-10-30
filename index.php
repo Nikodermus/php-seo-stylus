@@ -16,5 +16,4 @@ require './pages/lib/nav.php';
 
 <?php
 require './pages/lib/footer.php';
-require './pages/base/scripts.php';
 ?>
