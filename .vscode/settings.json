@@ -1,15 +1,30 @@
 {
-    "editor.formatOnSave": true,
-    "[javascript]": {
-        "editor.formatOnSave": false
-    },
-    "[javascriptreact]": {
-        "editor.formatOnSave": false
-    },
     "eslint.autoFixOnSave": true,
-    "prettier.disableLanguages": ["javascript", "javascriptreact"],
+    "eslint.enable": true,
+    "eslint.run": "onSave",
+    "eslint.validate": ["javascript", "javascriptreact"],
+    "php.suggest.basic": true,
+    "phpserver.browser": "firefox",
+    "stylusSupremacy.alwaysUseZeroWithoutUnit": true,
+    "stylusSupremacy.insertBraces": false,
+    "stylusSupremacy.insertSemicolons": false,
+    "stylusSupremacy.quoteChar": "\"",
+    "stylusSupremacy.reduceMarginAndPaddingValues": true,
+    "stylusSupremacy.selectorSeparator": "\n",
+    "emmet.includeLanguages": {
+        "javascript": "html"
+    },
     "eslint.options": {
-        "extensions": [".php", ".js", ".vue", ".jsx", "ts", "tsx"],
-        "configFile": "<PATH_TO_DIR>/.eslintrc"
+        "configFile": "<PATH_TO_DIR>/.eslintrc",
+        "extensions": [".js", ".vue", ".jsx", "ts", "tsx"]
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }

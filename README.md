@@ -76,6 +76,22 @@ This project is meant to be work with Vainilla Javascript and has an initial JS 
 
 You can add external javascript files inside `static/vendor`. This project offers retina support with [RetinaJS](http://imulus.github.io/retinajs/)
 
+It's recommended to use a style guide, see [ESLint: WesBos Configuration](https://github.com/wesbos/eslint-config-wesbos)
+
+### VSCode
+
+If you are working with Visual Studio Code, the following extensions might come to help:
+
+-   EditorConfig for VS Code by EditorConfig
+-   ESLint by Dirk Baeumer
+-   Manta's Stylus Supremacy by Anantachai Saothong
+-   PHP Intelephense by Ben Mewburn
+-   PHP Server by brapifra
+-   Prettier - Code formatter by Esben Petersen
+-   language-stylus by sysoev
+
+This project is already provided with a configuration using these plugins in `.vscode/settings.json` which you can override or delete.
+
 ---
 
 ## Deployment
@@ -83,14 +99,14 @@ You can add external javascript files inside `static/vendor`. This project offer
 To create compiled, clean and compressed styles
 
 ```sh
-# delete previous files
-rm -rf ./static/css/
-
 # compile compressed
 stylus -u nib -u rupture -c ./style/index.styl -o ./static/css/main.min.css
 
 # clean CSS
 purgecss --css ./static/css/main.min.css --content **/*.php --out static/css
+
+# delete soruces
+rm -rf style *.map
 ```
 
 Once the site is live you can get your `sitemap.xml` with a [generator](https://www.xml-sitemaps.com/) and replace the placeholder one
