@@ -1,6 +1,6 @@
 # PHP SEO Site + Stylus Boilerplate
 
-This is a template meant for the creation of static websites allowing component reusing and highly SEO-friendly.
+This is a template meant for the creation of static websites allowing component reusing and highly SEO-friendly. Uses Stylus as preprocessor with a design system already in place.
 
 ---
 
@@ -24,8 +24,7 @@ This is a template meant for the creation of static websites allowing component 
 
 ### Running Project
 
--   In order to have linting and formatting, use [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
--   Start [PHP server](https://marketplace.visualstudio.com/items?itemName=brapifra.phpserver), or use your own.
+-   Using `index.php` as entry point, run your PHP server.
 -   Run and watch stylus
     ```
     stylus -u nib -u rupture -w -m ./style/index.styl -o ./static/css/main.min.css
@@ -35,8 +34,8 @@ This is a template meant for the creation of static websites allowing component 
 
 -   [ ] Change the metadata inside `pages/base/head.php`
 -   [ ] Change the metadata inside `index.php`
--   [ ] Include the fonts files in `static/fonts` and add the stylesheet with the `@font-face` mixin in `style/library/fonts.styl`
--   [ ] Change the CSS colors and fonts for yours in `style/helpers/variables.styl`
+-   [ ] Include the fonts files in `static/fonts` and add the stylesheet with the `font-face` mixin in `style/library/fonts.styl`
+-   [ ] Change the CSS colors and fonts for yours in `style/helpers/tokens.styl`
 -   [ ] Replace offline image in `static/img/offline.jpg`
 -   [ ] Replace meta images in `static/meta-img`
 -   [ ] Replace `favicon.ico`
@@ -82,21 +81,23 @@ It's recommended to use a style guide, see [ESLint: WesBos Configuration](https:
 
 If you are working with Visual Studio Code, the following extensions might come to help:
 
--   EditorConfig for VS Code by EditorConfig
--   ESLint by Dirk Baeumer
--   Manta's Stylus Supremacy by Anantachai Saothong
--   PHP Intelephense by Ben Mewburn
--   PHP Server by brapifra
--   Prettier - Code formatter by Esben Petersen
--   language-stylus by sysoev
+-   `EditorConfig for VS Code` by EditorConfig
+-   `ESLint` by Dirk Baeumer
+-   `Manta's Stylus Supremacy` by Anantachai Saothong
+-   `PHP Intelephense` by Ben Mewburn
+-   `PHP Server` by brapifra
+-   `Prettier - Code formatter` by Esben Petersen
+-   `language-stylus` by sysoev
 
 This project is already provided with a configuration using these plugins in `.vscode/settings.json` which you can override or delete.
+
+You can use [PHP server](https://marketplace.visualstudio.com/items?itemName=brapifra.phpserver) to start the site, open `index.php`, a blue button on the top right corner of the tab will appear, you can click there to trigger the server, you can open your browser at `localhost:3000` to see the site if it doesn't automatically opens.
 
 ---
 
 ## Deployment
 
-To create compiled, clean and compressed styles
+To create compiled, clean and compressed assets.
 
 ```sh
 # compile compressed
@@ -106,7 +107,7 @@ stylus -u nib -u rupture -c ./style/index.styl -o ./static/css/main.min.css
 purgecss --css ./static/css/main.min.css --content **/*.php --out static/css
 
 # delete soruces
-rm -rf style *.map
+rm -rf style demo
 ```
 
 Once the site is live you can get your `sitemap.xml` with a [generator](https://www.xml-sitemaps.com/) and replace the placeholder one
