@@ -106,7 +106,7 @@ stylus -u nib -u rupture -c ./style/index.styl -o ./static/css/main.min.css
 # clean CSS
 purgecss --css ./static/css/main.min.css --content **/*.php --out static/css
 
-# delete soruces
+# delete sources
 rm -rf style demo
 ```
 
