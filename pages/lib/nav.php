@@ -1,6 +1,6 @@
+<!-- REPLACE-ME -->
 <header>
     <nav>
-
         <ul>
             <li>
                 <a href="/demo/">Demo</a>

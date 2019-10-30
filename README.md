@@ -34,13 +34,14 @@ This is a template meant for the creation of static websites allowing component 
 
 -   [ ] Change the metadata inside `pages/base/head.php`
 -   [ ] Change the metadata inside `index.php`
+-   [ ] Change the content and metadata for `404.php`
 -   [ ] Include the fonts files in `static/fonts` and add the stylesheet with the `font-face` mixin in `style/library/fonts.styl`
 -   [ ] Change the CSS colors and fonts for yours in `style/helpers/tokens.styl`
--   [ ] Replace offline image in `static/img/offline.jpg`
+-   [ ] Remove or replace test image in `static/img/offline.jpg`
 -   [ ] Replace meta images in `static/meta-img`
 -   [ ] Replace `favicon.ico`
 -   [ ] Fill info in `.htaccess`
--   [ ] Fill info in `site.appcache` (This info needs to be changed in each release)
+-   [ ] Find and deleted/filled of the instances of the work `REPLACE-ME`, this ensures you don't have placeholder content.
 
 ### Creating pages
 
@@ -107,7 +108,7 @@ stylus -u nib -u rupture -c ./style/index.styl -o ./static/css/main.min.css
 purgecss --css ./static/css/main.min.css --content **/*.php --out static/css
 
 # delete sources
-rm -rf style demo
+rm -rf style demo; find . -name '*.map' -delete; find . -name '*.gitkeep' -delete; rm .editorconfig .prettierignore .prettierrc
 ```
 
 Once the site is live you can get your `sitemap.xml` with a [generator](https://www.xml-sitemaps.com/) and replace the placeholder one
