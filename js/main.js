@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
     retinajs();
-    console.log("ready");
+    console.log('ready');
 });
