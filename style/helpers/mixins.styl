@@ -1,55 +1,38 @@
-@require "nib"
 @require "./tokens"
+@require "../vendor/retina"
 
 // Pixels to REM
 rem(measure)
-    return measure / unit(font-size-base, "") * 1rem
+    return unit(measure, "") / unit(font-size-base, "") * 1rem
 
 // Pixels to EM
 em(measure)
-    return measure / unit(font-size-base, "") * 1em
-
-// Add retina background media
-bg-retina(file, ext, parallax = false)
-    background-image: url(file + "." + ext)
-    background-size: cover
-    background-position: center center
-
-    if (parallax)
-        background-attachment: fixed
-
-    @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
-        background-image: url(file + "@2x" + ext)
-        background-size: cover
-        background-position: center center
-
-        if (parallax)
-            background-attachment: fixed
+    return unit(measure, "") / unit(font-size-base, "") * 1em
 
 // Cross-browser placeholder support
 placeholder()
-    ::-webkit-input-placeholder
+    &::-webkit-input-placeholder
         {block}
 
-    :-moz-placeholder
+    &:-moz-placeholder
         {block}
 
-    ::-moz-placeholder
+    &::-moz-placeholder
         {block}
 
-    :-ms-input-placeholder
+    &:-ms-input-placeholder
         {block}
 
 scrollbars(size, foreground-color, background-color = mix(foreground-color, color-white, 50%))
     // For Google Chrome
-    ::-webkit-scrollbar
+    &::-webkit-scrollbar
         width: size
         height: size
 
-    ::-webkit-scrollbar-thumb
+    &::-webkit-scrollbar-thumb
         background: foreground-color
 
-    ::-webkit-scrollbar-track
+    &::-webkit-scrollbar-track
         background: background-color
 
     // For Internet Explorer

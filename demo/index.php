@@ -8,10 +8,18 @@ require '../pages/lib/nav.php';
 ?>
 
 <main>
-    <section>
-        <h1>You are in demo!</h1>
-        <article></article>
-        <article></article>
+    <h1>You are inside demo!</h1>
+    <section class="demo">
+        <article class="bg-retina">
+            <input type="text" placeholder="This is the plaholder">
+            <button>I'm enabled</button>
+            <button disabled>I'm not</button>
+        </article>
+        <article>
+            <div class="square">
+                <div class="square__content">This is a responsive square</div>
+            </div>
+        </article>
     </section>
 </main>
 

@@ -10,7 +10,7 @@ This is a template meant for the creation of static websites allowing component 
 
 -   This template is meant for global use, so global npm packages will be used, to install them all
     ```sh
-    npm i -g stylus nib rupture purgecss
+    npm i -g stylus rupture purgecss
     ```
 -   Install PHP 5+
 
@@ -27,7 +27,7 @@ This is a template meant for the creation of static websites allowing component 
 -   Using `index.php` as entry point, run your PHP server.
 -   Run and watch stylus
     ```
-    stylus -u nib -u rupture -w -m ./style/index.styl -o ./static/css/main.min.css
+    stylus -u rupture -w -m ./style/index.styl -o ./static/css/main.min.css
     ```
 
 ### Initial Data
@@ -41,7 +41,7 @@ This is a template meant for the creation of static websites allowing component 
 -   [ ] Replace meta images in `static/meta-img`
 -   [ ] Replace `favicon.ico`
 -   [ ] Fill info in `.htaccess`
--   [ ] Find and deleted/filled of the instances of the work `REPLACE-ME`, this ensures you don't have placeholder content.
+-   [ ] Find and deleted/filled of the instances of the word `REPLACE-ME`, this ensures you don't have placeholder content.
 
 ### Creating pages
 
@@ -102,7 +102,7 @@ To create compiled, clean and compressed assets.
 
 ```sh
 # compile compressed
-stylus -u nib -u rupture -c ./style/index.styl -o ./static/css/main.min.css
+stylus -u rupture -c ./style/index.styl -o ./static/css/main.min.css
 
 # clean CSS
 purgecss --css ./static/css/main.min.css --content **/*.php --out static/css

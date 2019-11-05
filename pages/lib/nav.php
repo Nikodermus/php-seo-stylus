@@ -3,23 +3,14 @@
     <nav>
         <ul>
             <li>
-                <a href="/demo/">Demo</a>
+                <a href="/demo/">Go to Demo</a>
             </li>
             <li>
-                <a href="#">Texto</a>
+                <a href="/">Go to Home</a>
             </li>
-            <li>
-                <a href="#">Texto</a>
-            </li>
-            <li>
-                <a href="#">Texto</a>
-            </li>
+
         </ul>
-        <h1>
-            <a href="/">
-                <img src="/static/img/offline.jpg" alt="img">
-            </a>
-        </h1>
+
     </nav>
 </header>
 <aside></aside>

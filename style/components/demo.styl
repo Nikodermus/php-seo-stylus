@@ -1,0 +1,31 @@
+@require "../helpers/mixins.styl"
+
+// REPLACE-ME Actually you should delete this file
+// This filex examplifies how to use the default mixins
+.demo
+    display: flex
+    height: 300vh
+
+    > *
+        flex-grow: 1
+
+    .bg-retina
+        retina("/static/img/offline.jpg", 2, cover, no-repeat fixed)
+        height: rem(200)
+
+        input
+            border: sizing-XS solid color-brand-red
+            width: em(400px)
+
+            +placeholder()
+                color: color-brand-red
+
+        button
+            background: color-brand-blue
+            disabled(color-brand-blue)
+
+            &:hover
+                background: color-brand-blue-light
+
+    .square
+        background: color-brand-gold
