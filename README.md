@@ -10,7 +10,7 @@ This is a template meant for the creation of static websites allowing component 
 
 -   This template is meant for global use, so global npm packages will be used, to install them all
     ```sh
-    npm i -g stylus rupture purgecss
+    npm install --global stylus rupture purgecss google-closure-compiler
     ```
 -   Install PHP 5+
 
@@ -47,7 +47,7 @@ This is a template meant for the creation of static websites allowing component 
 
 To create inner and transparent pages (no `.php` at the end), you can copy the `demo` folder and edit it as needed, all files are automatically attached to scripts and styles, or use
 
-```
+```sh
 cp -r demo <ROUTE>
 ```
 
@@ -78,6 +78,20 @@ You can add external javascript files inside `static/vendor`. This project offer
 
 It's recommended to use a style guide, see [ESLint: WesBos Configuration](https://github.com/wesbos/eslint-config-wesbos)
 
+### CSS with Stylus
+
+This template uses stylus to pre-processing css, including autoprefix and import support, here are some hot tips to have in mind.
+
+-   Include `.css` files and compress them into a single file, changing the extension to `.styl` and requiring them inside `style/index.styl`.
+-   Create component styles, creating a `.styl` file inside `style/components`, all the files here are added by default.
+-   This CSS build includes a design system, based on tokens, get to know this file `style/helpers/tokens.styl`, that way you can have a consistent look across your project.
+-   This project include a couple mixins, get to know them how to use them and what they do checking out `style/components/demo.styl`, and with your [PHP server](https://marketplace.visualstudio.com/items?itemName=brapifra.phpserver) enabled, see `localhost:3000/demo`.
+-   This project uses `rupture`, a Stylus mixin library for `@media-query` and responsive management, see more at [Rupture](https://jescalan.github.io/rupture/). The scales used are defined in `style/helpers/tokens.styl`.
+
+### Accesibility _A11Y_
+
+This project uses `foody/a11y.css`, which is imported in the stylus pipeline to generate accesibility tips, errors and suggestions, this is meant for you to fix this issues on your side and this file is not meant for production use, read more about [a11y](https://ffoodd.github.io/a11y.css/index.html).
+
 ### VSCode
 
 If you are working with Visual Studio Code, the following extensions might come to help:
@@ -98,6 +112,8 @@ You can use [PHP server](https://marketplace.visualstudio.com/items?itemName=bra
 
 ## Deployment
 
+Remove the include to `a11y.styl` inside `style/index.styl`, this is meant for development purposes.
+
 To create compiled, clean and compressed assets.
 
 ```sh
@@ -106,6 +122,9 @@ stylus -u rupture -c ./style/index.styl -o ./static/css/main.min.css
 
 # clean CSS
 purgecss --css ./static/css/main.min.css --content **/*.php --out static/css
+
+# compress JS
+google-closure-compiler --js=js/main.js --js_output_file=js/main.js
 
 # delete sources
 rm -rf style demo; find . -name '*.map' -delete; find . -name '*.gitkeep' -delete; rm .editorconfig .prettierignore .prettierrc
