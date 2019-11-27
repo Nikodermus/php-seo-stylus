@@ -52,9 +52,9 @@ disabled(color)
         &:hover
             background: @background
 
-font-face(font, weight, style = "normal")
+font-face(font, weight, file-name = font, style = normal)
     @font-face
         font-family: font
-        src: url("/static/fonts/" + font + ".woff2") format("woff2"), url("/static/fonts/" + font + ".woff2") format("woff"), url("/static/fonts/" + font + ".woff2") format("ttf")
+        src: url("/static/fonts/" + file-name + ".woff2") format("woff2"), url("/static/fonts/" + file-name + ".woff2") format("woff"), url("/static/fonts/" + file-name + ".woff2") format("ttf")
         font-weight: weight
         font-style: style

@@ -1,10 +1,9 @@
 @require "./helpers/reset"
 @require "./helpers/mixins"
 @require "./helpers/miscelanous"
-
+@require "./library/fonts"
 // You can remove this on release
 @require "./vendor/a11y"
-
 @require "./components/*"
 
 :root
@@ -25,13 +24,14 @@ html
         max-width: @max-width
         min-height: 100%
         overflow-x: hidden
+        scroll-behavior: @scroll-behavior
         width: 100vw
 
         scrollbar
         *
             font-family: @font-family
             line-height: line-height-MD
-            scrollbar
+            scroll-behavior: @scroll-behavior
 
 h1
 h2
